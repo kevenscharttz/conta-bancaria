@@ -35,7 +35,7 @@ public class Main {
                 """);
 
         opcao = ler.nextInt();
-        while (opcao > 0){
+        while (opcao != 4){
             switch (opcao) {
                 case 1:
                     System.out.println("Você possui R$"+saldoConta);
@@ -46,9 +46,7 @@ public class Main {
                 case 3:
                     saldoConta = metodo.transferirSaldos (saldoConta, ler);
                     break;
-                case 4:
-                    System.out.println("Encerrando o sistema. Obrigado!");
-                    return;
+                
 
                     default:
                     System.out.println("Opção invalida\n");
@@ -64,5 +62,6 @@ public class Main {
                 """);
             opcao = ler.nextInt();
         }
+        System.out.println("Encerrando o sistema. Obrigado!");
     }
 }
